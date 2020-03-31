@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/default">
+<body>
+	<div id="page" layout:fragment="content">
+		<div class="container">
+			<div style="text-align: center">
+				<h4>
+					Viewing Photo Id : <b th:text="${photoid}"></b><br /> 
+					 <b th:text="${title}"></b><br /> 
+					  <b th:text="${photodate}"></b><br /> 
+					   <b th:text="${photographer}"></b><br /> 
+					    <b th:text="${photolocation}"></b><br /> 
+				</h4>
+				<a href="/"
+						class="btn btn-sm btn-primary btn-space">Back to home page</a>
+			</div>
+
+			<br />
+			<div style="text-align: center">
+				<img alt="sample" th:src="*{'data:image/png;base64,'+image}"
+					width="200" />
+			</div>
+			<br/><br/><br/>
+		</div>
+	</div>
+</body>
+</html>

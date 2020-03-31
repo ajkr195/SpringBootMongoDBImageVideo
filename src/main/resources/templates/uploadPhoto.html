@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/default">
+<body>
+	<div id="page" layout:fragment="content">
+		<div class="container">
+			<div style="text-align: center">
+				<h4>
+					<b>Upload new Photo</b>
+				</h4>
+			</div>
+			<form method="POST" action="/photos/add"
+				enctype="multipart/form-data">
+
+				<div class="row">
+					<label class="col-md-2 control-label text-right"
+						for="title">Title:</label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="text" name="title" class="form-control"
+								placeholder="Photo Title" required="required" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<label class="col-md-2 control-label text-right"
+						for="photodate">Photo Date:</label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="text" name="photodate" class="form-control"
+								placeholder="Photo Date" required="required" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<label class="col-md-2 control-label text-right"
+						for="photographer">Photographer:</label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="text" name="photographer" id="photographer" class="form-control"
+								placeholder="Photographer" required="required" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<label class="col-md-2 control-label text-right"
+						for="photolocation">Photo Location:</label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="text" name="photolocation" class="form-control"
+								placeholder="Photo Location" required="required" />
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<label class="col-md-2 control-label text-right "
+						for="image">Image:</label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="file" name="image" accept="image/*" required="required" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				<label class="col-md-2 control-label text-right"
+						for="submit"> </label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="submit" value="Upload" />
+						</div>
+					</div>
+				</div>
+
+
+			</form>
+		</div>
+	</div>
+</body>
+</html>

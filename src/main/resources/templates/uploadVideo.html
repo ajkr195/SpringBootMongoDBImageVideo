@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/default">
+<body>
+	<div id="page" layout:fragment="content">
+		<div class="container">
+			<div style="text-align: center">
+				<h4>
+					<b>Upload new Video</b>
+				</h4>
+			</div>
+			<form method="POST" action="/videos/add"
+				enctype="multipart/form-data">
+
+				<div class="row">
+					<label class="col-md-2 control-label text-right"
+						for="title">Title:</label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="text" name="title" class="form-control"
+								placeholder="Video Title" required="required" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<label class="col-md-2 control-label text-right"
+						for="releasedate">Release Date:</label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="text" name="releasedate" class="form-control"
+								placeholder="Video Release Date" required="required" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<label class="col-md-2 control-label text-right"
+						for="producer">Producer:</label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="text" name="producer" class="form-control"
+								placeholder="Video Producer" required="required" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<label class="col-md-2 control-label text-right"
+						for="director">Director:</label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="text" name="director" class="form-control"
+								placeholder="Video Director" required="required" />
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<label class="col-md-2 control-label text-right "
+						for="videofile">Image:</label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="file" name="file" accept="video/*"
+								required="required" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<label class="col-md-2 control-label text-right"
+						for="submitbutton"> </label>
+					<div class="col-md-7 pull-left">
+						<div class="form-group">
+							<input type="submit" value="Upload" />
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</form>
+		</div>
+	</div>
+</body>
+</html>

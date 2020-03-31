@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/default">
+<body>
+	<div id="page" layout:fragment="content">
+		<div class="container">
+			<div style="text-align: center">
+				<h4>
+					Viewing Video : <b th:text="${title}"></b><br />
+					<b th:text="${releasedate}"></b><br />
+					<b th:text="${producer}"></b><br />
+					<b th:text="${director}"></b><br />
+				</h4>
+				<a href="/" class="btn btn-sm btn-primary btn-space">Back to
+					home page</a>
+			</div>
+
+			<br />
+			<div style="text-align: center">
+				<video width="400" controls>
+					<source th:src="${url}" />
+				</video>
+			</div>
+			<br /> <br /> <br />
+		</div>
+
+	</div>
+</body>
+</html>

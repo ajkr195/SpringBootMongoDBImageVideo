@@ -1,0 +1,28 @@
+<div class="footer text-center" th:fragment="footer">
+<script type="text/javascript" src="webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="webjars/jquery-validation/1.19.0/jquery.validate.min.js"></script>
+	<script type="text/javascript"
+		src="webjars/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!-- 	<script type="text/javascript" src="js/main.js"></script> -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			setTimeout(function() {
+				$('#myalert').alert('close');
+			}, 2000);
+		});
+	</script>
+
+	<footer class="footer bg-dark text-white p-0">
+		<div class="container">
+			<!-- 		<span  style="text-align:center;">Spring Boot. What else you are looking for? | <a href="#" -->
+			<span class="text-center">SPRING BOOT ROCKS | <a href="#"
+				data-toggle="modal" style="color: white;"><i
+					class="far fa-copyright"></i>Copyright Notice</a> | <a href="#"
+				data-toggle="modal" data-target="#contactUsModalCenter"
+				style="color: white;"><i class="fas fa-phone"></i> Contact us <i
+					class="fas fa-comment"></i></a> | <a href="#" data-toggle="modal"
+				style="color: white;">Know more about us</a></span>
+		</div>
+	</footer>
+</div>

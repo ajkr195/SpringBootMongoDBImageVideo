@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/default">
+<body>
+	<div id="page" layout:fragment="content">
+
+		<div class="container">
+			<div style="text-align: center">
+				<h4>
+					<b>Home Page</b>
+				</h4>
+			</div>
+
+			<div th:if="${message != null}" th:text="${message}">Message</div>
+
+			<div class="row">
+				<div class="col-xs-6">
+					<a href="/photos/upload" class="btn btn-sm btn-primary btn-space">Upload
+						new Photo</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="/videos/upload" class="btn btn-sm btn-danger btn-space">Upload
+						new Video</a>
+				</div>
+			</div>
+			<hr />
+				<div class="col-xs-6">
+					<a href="/photolist">List of Photos</a>
+				</div>
+				<br/>
+				<div class="col-xs-6">
+					<a href="/videolist">List of Videos</a>
+				</div>
+			<hr />
+		</div>
+
+	</div>
+</body>
+</html>
