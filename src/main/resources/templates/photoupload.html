@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="layouts/default">
+	layout:decorate="~{layouts/default}">
+<head>
+<title>MongoDB</title>
+</head>
 <body>
 	<div id="page" layout:fragment="content">
 		<div class="container">
@@ -10,12 +13,10 @@
 					<b>Upload new Photo</b>
 				</h4>
 			</div>
-			<form method="POST" action="/photos/add"
-				enctype="multipart/form-data">
+			<form method="POST" action="/photo/add" enctype="multipart/form-data">
 
 				<div class="row">
-					<label class="col-md-2 control-label text-right"
-						for="title">Title:</label>
+					<label class="col-md-2 control-label text-right" for="title">Title:</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
 							<input type="text" name="title" class="form-control"
@@ -23,10 +24,10 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="row">
-					<label class="col-md-2 control-label text-right"
-						for="photodate">Photo Date:</label>
+					<label class="col-md-2 control-label text-right" for="photodate">Photo
+						Date:</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
 							<input type="text" name="photodate" class="form-control"
@@ -34,18 +35,18 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="row">
-					<label class="col-md-2 control-label text-right"
-						for="photographer">Photographer:</label>
+					<label class="col-md-2 control-label text-right" for="photographer">Photographer:</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
-							<input type="text" name="photographer" id="photographer" class="form-control"
-								placeholder="Photographer" required="required" />
+							<input type="text" name="photographer" id="photographer"
+								class="form-control" placeholder="Photographer"
+								required="required" />
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<label class="col-md-2 control-label text-right"
 						for="photolocation">Photo Location:</label>
@@ -58,17 +59,17 @@
 				</div>
 
 				<div class="row">
-					<label class="col-md-2 control-label text-right "
-						for="image">Image:</label>
+					<label class="col-md-2 control-label text-right " for="image">Image:</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
-							<input type="file" name="image" accept="image/*" required="required" />
+							<input type="file" name="image" accept="image/*"
+								required="required" />
 						</div>
 					</div>
 				</div>
 				<div class="row">
-				<label class="col-md-2 control-label text-right"
-						for="submit"> </label>
+					<label class="col-md-2 control-label text-right" for="submit">
+					</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
 							<input type="submit" value="Upload" />

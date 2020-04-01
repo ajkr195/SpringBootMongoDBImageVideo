@@ -34,11 +34,11 @@ public class VideoController {
     @RequestMapping(value = "/videolist")
    	public String index(Model model) {
    		model.addAttribute("videos", videoService.getMetaData());
-   		return "indexvideo";
+   		return "videolist";
    	}
     
     
-    @GetMapping("/videos/{id}")
+    @GetMapping("/video/{id}")
     public String getVideo(@PathVariable String id, Model model) throws IllegalStateException, IOException {
         Video video = videoService.getVideo(id);
         model.addAttribute("title", id);
@@ -54,26 +54,26 @@ public class VideoController {
         System.out.println("+=+=+=+=+=    " + video.getDirector());
         
         
-        return "videos";
+        return "video";
     }
 
-    @GetMapping("/videos/stream/{id}")
+    @GetMapping("/video/stream/{id}")
     public void streamVideo(@PathVariable String id, HttpServletResponse response) throws IllegalStateException, IOException {
         Video video = videoService.getVideo(id);
         FileCopyUtils.copy(video.getStream(), response.getOutputStream());
     }
 
-    @GetMapping("/videos/upload")
+    @GetMapping("/video/upload")
     public String uploadVideo(Model model) {
         model.addAttribute("message", "hello");
-        return "uploadVideo";
+        return "videoupload";
     }
 
-    @PostMapping("/videos/add")
+    @PostMapping("/video/add")
     public String addVideo(@RequestParam("title") String title, @RequestParam("releasedate") String releasedate,@RequestParam("producer") String producer,@RequestParam("director") String director,@RequestParam("file") MultipartFile file, Model model) throws IOException {
         String id = videoService.addVideo(title, releasedate, producer, director, file);
         
-        return "redirect:/videos/" + title;
+        return "redirect:/video/" + title;
 //        return "redirect:/videos/" + id;
     }
     

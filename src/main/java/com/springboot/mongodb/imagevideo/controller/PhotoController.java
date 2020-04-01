@@ -33,10 +33,10 @@ public class PhotoController {
 	@RequestMapping(value = "/photolist")
 	public String indexphoto(Model model) {
 		model.addAttribute("photos", photoService.listFilesByPage(0, 20));
-		return "indexphoto";
+		return "photolist";
 	}
 
-	@GetMapping("/photos/{id}")
+	@GetMapping("/photo/{id}")
 	public String getPhoto(@PathVariable String id, Model model) {
 		Photo photo = photoService.getPhoto(id);
 		model.addAttribute("serverTime", new Date());
@@ -47,21 +47,21 @@ public class PhotoController {
 		model.addAttribute("photolocation", photo.getPhotolocation());
 		model.addAttribute("image", Base64.getEncoder().encodeToString(photo.getImage().getData()));
 		System.out.println("Retrieving image : " + photo.getId() + " : " + photo.getTitle());
-		return "photos";
+		return "photo";
 	}
 
-	@GetMapping("/photos/upload")
+	@GetMapping("/photo/upload")
 	public String uploadPhoto(Model model) {
 		model.addAttribute("message", "hello");
-		return "uploadPhoto";
+		return "photoupload";
 	}
 
-	@PostMapping("/photos/add")
+	@PostMapping("/photo/add")
 	public String addPhoto(@RequestParam("title") String title, @RequestParam("photodate") String photodate,
 			@RequestParam("photographer") String photographer, @RequestParam("photolocation") String photolocation,
 			@RequestParam("image") MultipartFile image, Model model) throws IOException {
 		String id = photoService.addPhoto(title,photodate,photographer,photolocation, image);
-		return "redirect:/photos/" + id;
+		return "redirect:/photo/" + id;
 	}
 
 }

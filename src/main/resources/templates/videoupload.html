@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="layouts/default">
+	layout:decorate="~{layouts/default}">
+<head>
+<title>MongoDB</title>
+</head>
 <body>
 	<div id="page" layout:fragment="content">
 		<div class="container">
@@ -10,12 +13,10 @@
 					<b>Upload new Video</b>
 				</h4>
 			</div>
-			<form method="POST" action="/videos/add"
-				enctype="multipart/form-data">
+			<form method="POST" action="/video/add" enctype="multipart/form-data">
 
 				<div class="row">
-					<label class="col-md-2 control-label text-right"
-						for="title">Title:</label>
+					<label class="col-md-2 control-label text-right" for="title">Title:</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
 							<input type="text" name="title" class="form-control"
@@ -23,10 +24,10 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="row">
-					<label class="col-md-2 control-label text-right"
-						for="releasedate">Release Date:</label>
+					<label class="col-md-2 control-label text-right" for="releasedate">Release
+						Date:</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
 							<input type="text" name="releasedate" class="form-control"
@@ -34,10 +35,9 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="row">
-					<label class="col-md-2 control-label text-right"
-						for="producer">Producer:</label>
+					<label class="col-md-2 control-label text-right" for="producer">Producer:</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
 							<input type="text" name="producer" class="form-control"
@@ -45,10 +45,9 @@
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="row">
-					<label class="col-md-2 control-label text-right"
-						for="director">Director:</label>
+					<label class="col-md-2 control-label text-right" for="director">Director:</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
 							<input type="text" name="director" class="form-control"
@@ -58,8 +57,7 @@
 				</div>
 
 				<div class="row">
-					<label class="col-md-2 control-label text-right "
-						for="videofile">Image:</label>
+					<label class="col-md-2 control-label text-right " for="videofile">Image:</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
 							<input type="file" name="file" accept="video/*"
@@ -68,8 +66,8 @@
 					</div>
 				</div>
 				<div class="row">
-					<label class="col-md-2 control-label text-right"
-						for="submitbutton"> </label>
+					<label class="col-md-2 control-label text-right" for="submitbutton">
+					</label>
 					<div class="col-md-7 pull-left">
 						<div class="form-group">
 							<input type="submit" value="Upload" />

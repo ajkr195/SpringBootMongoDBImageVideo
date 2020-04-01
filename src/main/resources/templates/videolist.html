@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/default}">
+<head>
+<title>MongoDB</title>
+</head>
+<body>
+	<div id="page" layout:fragment="content">
+
+		<div class="container">
+			<div style="text-align: center">
+				<h4>
+					<b>List of Videos</b>
+				</h4>
+			</div>
+
+			<hr />
+			<div class="row">
+				<div class="col-xs-6">
+					<a href="/">Go back to Home</a>
+				</div>
+				<div class="col-xs-6">
+					<div class="col-xs-6">
+						<a href="/video/upload" class="btn btn-sm btn-danger btn-space">Upload
+							new Video</a>
+					</div>
+				</div>
+			</div>
+			<br />
+			<table class="table table-bordered table-hover" id="myTable">
+				<thead>
+					<tr>
+						<td>Video Id/Title</td>
+						<td>Release Date</td>
+						<td>Producer</td>
+						<td>Director</td>
+						<td>Content Type</td>
+						<td>Video Type</td>
+						<td>Action</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:if="${videos.size()} eq 0">
+						<td colspan="3">No videos/files To Display</td>
+					</tr>
+					<tr th:each="video : ${videos}">
+						<td th:text="${video.title}" /></td>
+						<td th:text="${video.releasedate}" /></td>
+						<td th:text="${video.producer}" /></td>
+						<td th:text="${video.director}" /></td>
+						<td th:text="${video._contentType}" /></td>
+						<td th:text="${video.type}" /></td>
+						<td><a th:href="'video/'+${video.title}"
+							class="btn btn-sm btn-success btn-space">View</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<br /> <br /> <br />
+
+	</div>
+</body>
+</html>

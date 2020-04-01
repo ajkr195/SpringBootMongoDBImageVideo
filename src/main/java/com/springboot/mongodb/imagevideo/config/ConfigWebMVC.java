@@ -19,8 +19,8 @@ public class ConfigWebMVC implements WebMvcConfigurer {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
-		registry.addResourceHandler("/photos/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
-		registry.addResourceHandler("/videos/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
+		registry.addResourceHandler("/photo/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
+		registry.addResourceHandler("/video/**").addResourceLocations(CLASSPATH_RESOURCE_LOCATIONS);
 	}
 
 	@Bean

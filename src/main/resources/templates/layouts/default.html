@@ -1,35 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head th:replace="fragments/header :: head"></head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet"
+	href="webjars/bootstrap/4.4.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/main.css" />
+</head>
 <body>
-	<nav class="navbar bg-custom navbar-expand-sm bg-dark navbar-dark py-1">
-		<a class="navbar-brand" href="/">MongoDB</a>
-		<button type="button" class="navbar-toggler" data-toggle="collapse"
-			data-target="#nav">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse justify-content-between" id="nav">
-
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="/photolist">Photos</a></li>
-				<li class="nav-item"><a class="nav-link" href="/videolist">Videos</a></li>
-
-
-				<li class="nav-item dropdown"><a
-					class="nav-link dropdown-toggle" href="/" id="navbardrop"
-					data-toggle="dropdown"> Dropdown link </a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="/">Link 1</a> <a
-							class="dropdown-item" href="/">Link 2</a> <a
-							class="dropdown-item" href="/">Link 3</a>
-					</div></li>
-			</ul>
-		</div>
-	</nav>
-	<!--    <div class="container"> -->
-	<div layout:fragment="content"></div>
+	<div th:replace="fragments/header :: header"></div>
+	<section layout:fragment="content"></section>
 	<div th:replace="fragments/footer :: footer"></div>
-	<!--    </div> -->
 </body>
 </html>
+
