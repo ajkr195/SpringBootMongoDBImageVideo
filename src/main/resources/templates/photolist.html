@@ -18,12 +18,12 @@
 			<hr />
 			<div class="row">
 				<div class="col-xs-6">
-					<a href="/">Go back to Home</a>
+					<a href="/" class="btn btn-sm btn-primary btn-space"><i class="fas fa-home"></i> Home</a>
 				</div>
 				<div class="col-xs-6">
 					<div class="col-xs-6">
-						<a href="/photo/upload" class="btn btn-sm btn-danger btn-space">Upload
-							new Photo</a>
+						<a href="/photo/upload" class="btn btn-sm btn-success btn-space">
+							<i class="fas fa-plus"></i> Upload New</a>
 					</div>
 				</div>
 			</div>
@@ -50,7 +50,7 @@
 						<td th:text="${photo.photographer}" /></td>
 						<td th:text="${photo.photolocation}" /></td>
 						<td><a th:href="'photo/'+${photo.id}"
-							class="btn btn-sm btn-success btn-space">View</a></td>
+							class="btn btn-sm btn-primary btn-space">View</a></td>
 					</tr>
 				</tbody>
 			</table>

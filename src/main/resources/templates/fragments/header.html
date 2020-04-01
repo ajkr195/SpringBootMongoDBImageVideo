@@ -6,9 +6,6 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta content="ie=edge" http-equiv="x-ua-compatible" />
 <title th:text="${metaTitle} ? ${metaTitle} : 'default title'"></title>
-<link rel="stylesheet"
-	href="webjars/bootstrap/4.4.1/css/bootstrap.min.css" />
-<link th:href="@{css/main.css}" rel="stylesheet" />
 
 </head>
 <body>
@@ -16,7 +13,7 @@
 		th:fragment="header">
 		<!-- 	<nav class="navbar bg-custom navbar-expand-sm bg-primary navbar-dark py-1" -->
 		<!-- 		th:fragment="header"> -->
-		<a class="navbar-brand" href="/">MongoDB</a>
+		<a class="navbar-brand" href="/"><i class="fas fa-home"></i> MongoDB</a>
 		<button type="button" class="navbar-toggler" data-toggle="collapse"
 			data-target="#nav">
 			<span class="navbar-toggler-icon"></span>

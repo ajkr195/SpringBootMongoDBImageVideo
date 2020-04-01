@@ -15,17 +15,16 @@
 					<b>Home Page</b>
 				</h4>
 			</div>
-
 			<div th:if="${message != null}" th:text="${message}">Message</div>
 
 			<div class="row">
 				<div class="col-xs-6">
-					<a href="/photo/upload" class="btn btn-sm btn-primary btn-space">Upload
-						new Photo</a>
+					<a href="/photo/upload" class="btn btn-sm btn-primary btn-space">
+						<i class="fas fa-camera"></i> Upload New Photo
+					</a>
 				</div>
 				<div class="col-xs-6">
-					<a href="/video/upload" class="btn btn-sm btn-danger btn-space">Upload
-						new Video</a>
+					<a href="/video/upload" class="btn btn-sm btn-success btn-space"><i class="fas fa-video"></i> Upload New Video</a>
 				</div>
 			</div>
 			<hr />
