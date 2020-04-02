@@ -17,39 +17,19 @@
 			</div>
 			<div th:if="${message != null}" th:text="${message}">Message</div>
 
-			<div class="row">
-				<div class="col-md-6">
-					<div class="jumbotron text-center alert-success">
-						<a href="/photo/upload" class="btn btn-sm btn-primary btn-space">
-							<i class="fas fa-camera fa-10x"></i> <h4>Upload New Photo</h4>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="jumbotron text-center alert-info">
-						<a href="/video/upload" class="btn btn-sm btn-success btn-space"><i
-							class="fas fa-video fa-10x"></i>  <h4>Upload New Video</h4></a>
-					</div>
-				</div>
-			</div>
+			<a href="/photo/upload" class="btn btn-sm btn-primary btn-space">
+				<i class="fas fa-camera"></i> Upload New Photo
+			</a> <br /> <br /><a href="/photolist"
+				class="btn btn-sm btn-primary btn-space"><i class="fas fa-list "></i>
+				List of Photos</a>
 			<hr />
-			<div class="row">
-				<div class="col-md-6">
-					<div class="jumbotron text-center alert-success">
-						<div class="jumbotron text-center alert-success">
-							<a href="/photolist" class="btn btn-sm btn-primary btn-space"><i class="fas fa-list fa-10x"></i> <h4>List of Photos</h4></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="jumbotron text-center alert-success">
-						<a href="/videolist" class="btn btn-sm btn-success btn-space"><i class="fas fa-list fa-10x"></i> <h4>List of Videos</h4></a>
-					</div>
-				</div>
-			</div>
+			<a href="/video/upload" class="btn btn-sm btn-success btn-space"><i
+				class="fas fa-video"></i> Upload New Video</a><br /> <br /><a
+				href="/videolist" class="btn btn-sm btn-success btn-space"><i
+				class="fas fa-list"></i> List of Videos</a>
 			<hr />
 		</div>
-		
+
 	</div>
 
 </body>

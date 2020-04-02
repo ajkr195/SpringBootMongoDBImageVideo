@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/default}">
+<head>
+<title>MongoDB</title>
+</head>
+<body>
+
+	<div id="page" layout:fragment="content">
+
+		<div class="container">
+			<div style="text-align: center">
+				<h4>
+					<b>Home Page</b>
+				</h4>
+			</div>
+			<div th:if="${message != null}" th:text="${message}">Message</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="jumbotron text-center alert-success">
+						<a href="/photo/upload" class="btn btn-sm btn-primary btn-space">
+							<i class="fas fa-camera fa-10x"></i> <h4>Upload New Photo</h4>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="jumbotron text-center alert-info">
+						<a href="/video/upload" class="btn btn-sm btn-success btn-space"><i
+							class="fas fa-video fa-10x"></i>  <h4>Upload New Video</h4></a>
+					</div>
+				</div>
+			</div>
+			<hr />
+			<div class="row">
+				<div class="col-md-6">
+					<div class="jumbotron text-center alert-success">
+						<div class="jumbotron text-center alert-success">
+							<a href="/photolist" class="btn btn-sm btn-primary btn-space"><i class="fas fa-list fa-10x"></i> <h4>List of Photos</h4></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="jumbotron text-center alert-success">
+						<a href="/videolist" class="btn btn-sm btn-success btn-space"><i class="fas fa-list fa-10x"></i> <h4>List of Videos</h4></a>
+					</div>
+				</div>
+			</div>
+			<hr />
+		</div>
+		
+	</div>
+
+</body>
+</html>
