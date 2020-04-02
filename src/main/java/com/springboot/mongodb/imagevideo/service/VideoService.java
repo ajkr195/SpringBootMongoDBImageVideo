@@ -89,12 +89,12 @@ public class VideoService {
         	idStrList.add(gfs.getMetadata());
         }
    	 
-   	for (Document d: idStrList) {
-   		System.out.println(">>>>>>>>>>>>>>>                "+ d.getString("title"));
-   		System.out.println(">>>>>>>>>>>>>>>                "+ d.getString("releasedate"));
-   		System.out.println(">>>>>>>>>>>>>>>                "+ d.getString("producer"));
-   		System.out.println(">>>>>>>>>>>>>>>                "+ d.getString("director"));
-   	}
+//   	for (Document d: idStrList) {
+//   		System.out.println(">>>>>>>>>>>>>>>                "+ d.getString("title"));
+//   		System.out.println(">>>>>>>>>>>>>>>                "+ d.getString("releasedate"));
+//   		System.out.println(">>>>>>>>>>>>>>>                "+ d.getString("producer"));
+//   		System.out.println(">>>>>>>>>>>>>>>                "+ d.getString("director"));
+//   	}
 //   	BasicDBObject query = new BasicDBObject("metadata.target_field", "abcdefg");
 	return idStrList;
 

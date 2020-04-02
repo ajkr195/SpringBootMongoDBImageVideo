@@ -18,26 +18,38 @@
 			<div th:if="${message != null}" th:text="${message}">Message</div>
 
 			<div class="row">
-				<div class="col-xs-6">
-					<a href="/photo/upload" class="btn btn-sm btn-primary btn-space">
-						<i class="fas fa-camera"></i> Upload New Photo
-					</a>
+				<div class="col-md-6">
+					<div class="jumbotron text-center alert-success">
+						<a href="/photo/upload" class="btn btn-sm btn-primary btn-space">
+							<i class="fas fa-camera fa-10x"></i> <h4>Upload New Photo</h4>
+						</a>
+					</div>
 				</div>
-				<div class="col-xs-6">
-					<a href="/video/upload" class="btn btn-sm btn-success btn-space"><i class="fas fa-video"></i> Upload New Video</a>
+				<div class="col-md-6">
+					<div class="jumbotron text-center alert-info">
+						<a href="/video/upload" class="btn btn-sm btn-success btn-space"><i
+							class="fas fa-video fa-10x"></i>  <h4>Upload New Video</h4></a>
+					</div>
 				</div>
 			</div>
 			<hr />
-			<div class="col-xs-6">
-				<a href="/photolist">List of Photos</a>
-			</div>
-			<br />
-			<div class="col-xs-6">
-				<a href="/videolist">List of Videos</a>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="jumbotron text-center alert-success">
+						<div class="jumbotron text-center alert-success">
+							<a href="/photolist" class="btn btn-sm btn-primary btn-space"><i class="fas fa-list fa-10x"></i> <h4>List of Photos</h4></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="jumbotron text-center alert-success">
+						<a href="/videolist" class="btn btn-sm btn-success btn-space"><i class="fas fa-list fa-10x"></i> <h4>List of Videos</h4></a>
+					</div>
+				</div>
 			</div>
 			<hr />
 		</div>
-
+		
 	</div>
 
 </body>

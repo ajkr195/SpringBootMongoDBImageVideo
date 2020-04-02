@@ -72,6 +72,16 @@ legend {
   padding:0px;
 }
 
+.jumbotron {
+	padding: 5px;
+/* 	border-style: solid; */
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	background-color: transparent !important;
+}
+
 .footer {
 	position: fixed;
 	bottom: 0;
